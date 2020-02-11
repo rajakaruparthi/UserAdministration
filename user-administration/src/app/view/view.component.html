@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th class="col">Id</th>
+          <th class="col">User</th>
+          <th class="col">Password</th>
+          <th class="col">Role</th>
+          <th class="col">Edit User</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let eachUser of viewUsers(); let i = index;">
+        <tr>
+          <td class="col">{{eachUser.id}}</td>
+          <td class="col">{{eachUser.username}}</td>
+          <td class="col">{{eachUser.password}}</td>
+          <td class="col">{{eachUser.role}}</td>
+          <td><a (click)="onEditUser(i)">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
